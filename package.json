@@ -1,0 +1,26 @@
+{
+  "name": "fridge-analyzer",
+  "version": "1.0.0",
+  "description": "Simple Form Submit App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cody",
+  "license": "MIT",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodySchluenz/FridgeAnalyzer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CodySchluenz/FridgeAnalyzer/issues"
+  },
+  "homepage": "https://github.com/CodySchluenz/FridgeAnalyzer#readme",
+  "dependencies": {
+    "initial-state": "^0.2.0"
+  }
+}
