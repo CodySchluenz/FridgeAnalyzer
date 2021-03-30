@@ -36,13 +36,13 @@ while True:
         #fridge is in use
     
 
-    if (sensor.lux > 20 and previousReading == 0):
+    if (sensor.lux > 5 and previousReading == 0):
         previousReading = 1
         print("high prev reading", str(previousReading))
         print(sensor.lux)
         streamer.log("Lux", 1)
         streamer.flush()
-    elif (sensor.lux < 20 and previousReading == 1):
+    elif (sensor.lux < 5 and previousReading == 1):
         previousReading = 0
         #print(streamer.LogQueue)
         streamer.log("Lux", 0)
