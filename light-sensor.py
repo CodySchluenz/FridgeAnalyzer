@@ -5,9 +5,9 @@ from ISStreamer.Streamer import Streamer
 
 
 # --------- User Settings ---------
-SENSOR_LOCATION_NAME = "Fridglyzer"
-BUCKET_NAME = "Fridglyzer"
-BUCKET_KEY = "6DREDJLQWEC9"
+SENSOR_LOCATION_NAME = "Fridglyzer" # not needed.
+BUCKET_NAME = "Sweet Tooth Community Fridge"
+BUCKET_KEY = "HBSHG3U7CG4E"
 ACCESS_KEY = "ist_BQsWk-sOdzWzz1-aANne7TBz_GNISkfB"
 MINUTES_BETWEEN_READS = 1
 # ---------------------------------
