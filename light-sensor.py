@@ -5,10 +5,9 @@ from ISStreamer.Streamer import Streamer
 
 
 # --------- User Settings ---------
-SENSOR_LOCATION_NAME = "Fridglyzer" # not needed.
-BUCKET_NAME = "Sweet Tooth Community Fridge"
-BUCKET_KEY = "HBSHG3U7CG4E"
-ACCESS_KEY = "ist_BQsWk-sOdzWzz1-aANne7TBz_GNISkfB"
+BUCKET_NAME = "INSERT BUCKET NAME HERE"
+BUCKET_KEY = "INSERT BUCKET KEY HERE"
+ACCESS_KEY = "INSERT ACCESS KEY HERE"
 MINUTES_BETWEEN_READS = 1
 # ---------------------------------
 
@@ -16,7 +15,7 @@ MINUTES_BETWEEN_READS = 1
 # BH1750 settings
 i2c = board.I2C()
 sensor = adafruit_bh1750.BH1750(i2c)
-sensor.resolution = 1 # LOW(3) / MID(0) / HIGH(default)(1)
+sensor.resolution = 1
 
 
 # Initial State settings
@@ -27,15 +26,6 @@ previousReading = 0
 
 while True:
 
-
-    # -------BH1750(Light Sensor)-----------------
-    #print("%.2f Lux" % sensor.lux)
-    #streamer.log("Lux", sensor.lux)
-    
-    # if sensor.lux > 3 
-        #fridge is in use
-    
-
     if (sensor.lux > 5 and previousReading == 0):
         previousReading = 1
         print("high prev reading", str(previousReading))
@@ -44,16 +34,7 @@ while True:
         streamer.flush()
     elif (sensor.lux < 5 and previousReading == 1):
         previousReading = 0
-        #print(streamer.LogQueue)
         streamer.log("Lux", 0)
         print("prev reading", str(previousReading))
         print("low light", str(sensor.lux))
         streamer.flush()
-
-
-    # For Testing uncomment the 5-second sleep and console prints.
-    #streamer.flush()
-    #time.sleep(2)
-
-    # For Final Product uncomment use longer sleep and remove prints.
-    # time.sleep(60*MINUTES_BETWEEN_READS)

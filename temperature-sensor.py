@@ -5,10 +5,9 @@ from ISStreamer.Streamer import Streamer
 
 
 # --------- User Settings ---------
-SENSOR_LOCATION_NAME = "Fridglyzer" # not needed?
-BUCKET_NAME = "Sweet Tooth Community Fridge"
-BUCKET_KEY = "HBSHG3U7CG4E"
-ACCESS_KEY = "ist_BQsWk-sOdzWzz1-aANne7TBz_GNISkfB"
+BUCKET_NAME = "INSERT BUCKET NAME HERE"
+BUCKET_KEY = "INSERT BUCKET KEY HERE"
+ACCESS_KEY = "INSERT ACCESS KEY HERE"
 MINUTES_BETWEEN_READS = 10
 # ---------------------------------
 
@@ -31,7 +30,6 @@ while True:
     bme280data = bme280.sample(bus, address, calibration_params_BME280)
     humidity = format(bme280data.humidity, ".1f")
     temp_c = bme280data.temperature
-    #temp_f = (temp_c * 1.8) + 32
 
     # Send Temp and Humidity to Web Dashboard (Initial State)
     streamer.log("Temperature(C)", temp_c)
@@ -39,13 +37,4 @@ while True:
     streamer.log("Humidity(%)", humidity)
     streamer.flush()
 
-
-
-
-
-    # For Testing uncomment the 5-second sleep and console prints.
-    #time.sleep(3)
-    #print(temp_c, temp_f,humidity)
-
-    # For Final Product uncomment use longer sleep and remove prints.
     time.sleep(60*MINUTES_BETWEEN_READS)
