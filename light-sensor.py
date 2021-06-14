@@ -1,4 +1,3 @@
-import time
 import adafruit_bh1750
 import board
 from ISStreamer.Streamer import Streamer

@@ -33,7 +33,6 @@ while True:
 
     # Send Temp and Humidity to Web Dashboard (Initial State)
     streamer.log("Temperature(C)", temp_c)
-    #streamer.log("Temperature(F)", temp_f)
     streamer.log("Humidity(%)", humidity)
     streamer.flush()
 
