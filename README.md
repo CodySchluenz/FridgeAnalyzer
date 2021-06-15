@@ -52,11 +52,25 @@ The microSD comes pre-installed with the full Raspberry Pi OS, so all that is le
 <br>
 <img src="img\initial-setup.png">
 
-### Raspberry Pi Configuration
+### Raspberry Pi Configuration - SSH
 In order to access the Raspberry Pi remotely from another computer or device, you will need to enable SSH.
 
-1. Enable SSH
-2. Enable I2C
+1. Launch `Raspberry Pi Configuration` from the `Preferences` menu
+2. Navigate to the `Interfaces` tab
+3. Select `Enabled` next to `SSH`
+4. Click `OK`
+
+<img src="img\ssh.jpg">
+
+### Raspberry Pi Configuration - I2C
+I2C is a very commonly used standard designed to allow one chip to talk to another. So, since the Raspberry Pi can talk I2C we can connect it to a variety of I2C capable chips and modules. The sensors we use rely on I2C, so we have to enable it.
+
+1. Launch `Raspberry Pi Configuration` from the `Preferences` menu
+2. Navigate to the `Interfaces` tab
+3. Select `Enabled` next to `I2C`
+4. Click `OK`
+
+<img src="img\i2c.png">
 
 ### Install Python Libraries
 
