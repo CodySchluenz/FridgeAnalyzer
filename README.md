@@ -74,6 +74,16 @@ I2C is a very commonly used standard designed to allow one chip to talk to anoth
 
 ### Install Python Libraries
 
+1. Install smbus and i2c-tools<br>
+`sudo apt-get install -y python-smbus i2c-tools`
+2. install pip<br>
+`sudo apt install python3-pip`
+3. install bme280 sensor software<br>
+`sudo pip3 install RPi.bme280`
+4. install bh1750 sensor software<br>
+`sudo pip3 install adafruit-circuitpython-bh1750`
+5. install InitialState streamer library<br>
+`sudo pip3 install ISStreamer`
 ### Python Code
 
 ### Run on startup / reboot
